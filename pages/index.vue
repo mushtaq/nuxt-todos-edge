@@ -1,16 +1,16 @@
 <script setup lang="ts">
-const host = useRequestURL().host
-let hosting = { url: 'https://pages.cloudflare.com', title: 'CloudFlare Pages' }
-if (host.includes('.netlify.app')) {
-  hosting = { url: 'https://www.netlify.com/products/#netlify-edge-functions', title: 'Netlify Edge Functions' }
-} else if (host.includes('.vercel.app')) {
-  hosting = { url: 'https://vercel.com/features/edge-functions', title: 'Vercel Edge Functions' }
-} else if (host.includes('.lagon.dev')) {
-  hosting = { url: 'https://lagon.app', title: 'Lagon' }
-} else if (host.includes('.deno.dev')) {
-  hosting = { url: 'https://deno.com/deploy', title: 'Deno Deploy' }
-}
-const isD1 = host.includes('nuxt-todos-edge.pages.dev')
+// const host = useRequestURL().host
+// let hosting = { url: 'https://pages.cloudflare.com', title: 'CloudFlare Pages' }
+// if (host.includes('.netlify.app')) {
+//   hosting = { url: 'https://www.netlify.com/products/#netlify-edge-functions', title: 'Netlify Edge Functions' }
+// } else if (host.includes('.vercel.app')) {
+//   hosting = { url: 'https://vercel.com/features/edge-functions', title: 'Vercel Edge Functions' }
+// } else if (host.includes('.lagon.dev')) {
+//   hosting = { url: 'https://lagon.app', title: 'Lagon' }
+// } else if (host.includes('.deno.dev')) {
+//   hosting = { url: 'https://deno.com/deploy', title: 'Deno Deploy' }
+// }
+// const isD1 = host.includes('nuxt-todos-edge.pages.dev')
 // const { loggedIn } = useUserSession()
 </script>
 
@@ -36,22 +36,24 @@ const isD1 = host.includes('nuxt-todos-edge.pages.dev')
       />
     </template>
     <p class="font-medium">
-      Welcome to Nuxt Todos Edge.
+      Welcome to Nuxt Todos App.
     </p>
     <p>
-      A <a href="https://nuxt.com" target="_blank" class="text-primary-500" rel="noopener">Nuxt</a> demo hosted on <a :href="hosting.url" target="_blank" rel="noopener" class="text-primary-500">{{ hosting.title }}</a> with server-side rendering on the edge and using <NuxtLink
-        :href="isD1 ? 'https://developers.cloudflare.com/d1/' : 'https://turso.tech'"
+      A <a href="https://nuxt.com" target="_blank" class="text-primary-500" rel="noopener">Nuxt</a> demo hosted on <a href="https://portal.azure.com" target="_blank" rel="noopener" class="text-primary-500">Azure</a> with server-side rendering on the edge and using <NuxtLink
+        href="https://turso.tech"
         target="_blank"
         rel="noopener"
         class="text-primary-500"
       >
-        {{ isD1 ? 'D1' : 'Turso' }} database
+        Turso database
       </NuxtLink>.
     </p>
     <hr class="dark:border-gray-700">
     <p class="text-sm text-gray-700 dark:text-gray-300 italic">
-      No personal informations regarding your GitHub account are stored in database.<br>
-      We store only the todos created linked with your GitHub ID.
+      Source code: https://github.com/mushtaq/nuxt-todos-edge <br>
+      <br>
+      Coped from: https://github.com/atinux/nuxt-todos-edge <br>
+      (removed the integration code for Github OAuth)
     </p>
   </UCard>
 </template>
