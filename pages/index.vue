@@ -39,14 +39,11 @@
       Welcome to Nuxt Todos App.
     </p>
     <p>
-      A <a href="https://nuxt.com" target="_blank" class="text-primary-500" rel="noopener">Nuxt</a> demo hosted on <a href="https://portal.azure.com" target="_blank" rel="noopener" class="text-primary-500">Azure</a> with server-side rendering on the edge and using <NuxtLink
-        href="https://turso.tech"
-        target="_blank"
-        rel="noopener"
-        class="text-primary-500"
-      >
-        Turso database
-      </NuxtLink>.
+      A <a href="https://nuxt.com" target="_blank" class="text-primary-500" rel="noopener"> Nuxt</a> 
+      todo-list demo with server-side rendering hosted using 
+      <a href="https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-nuxtjs" target="_blank" class="text-primary-500" rel="noopener"> 
+        Azure Functions with Azure Static Web App</a> and 
+      <a href="https://turso.tech"  target="_blank" class="text-primary-500" rel="noopener"> Turso database </a>.
     </p>
     <hr class="dark:border-gray-700">
     <p class="text-sm text-gray-700 dark:text-gray-300 italic">
