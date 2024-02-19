@@ -1,13 +1,13 @@
 <script setup>
 definePageMeta({
-  middleware: 'auth'
+  // middleware: 'auth'
 })
 const loading = ref(false)
 const newTodo = ref('')
 const newTodoInput = ref(null)
 
 const toast = useToast()
-const { user, clear } = useUserSession()
+// const { user, clear } = useUserSession()
 const { data: todos } = await useFetch('/api/todos')
 
 async function addTodo () {
@@ -54,11 +54,11 @@ async function deleteTodo (todo) {
   toast.add({ title: `Todo "${todo.title}" deleted.` })
 }
 
-const items = [[{
-  label: 'Logout',
-  icon: 'i-heroicons-arrow-left-on-rectangle',
-  click: clear
-}]]
+// const items = [[{
+//   label: 'Logout',
+//   icon: 'i-heroicons-arrow-left-on-rectangle',
+//   click: clear
+// }]]
 </script>
 
 <template>
@@ -70,12 +70,12 @@ const items = [[{
         </NuxtLink>
       </h3>
 
-      <UDropdown v-if="user" :items="items">
+      <!-- <UDropdown v-if="user" :items="items">
         <UButton color="white" trailing-icon="i-heroicons-chevron-down-20-solid">
           <UAvatar :src="`https://github.com/${user.login}.png`" :alt="user.login" size="3xs" />
           {{ user.login }}
         </UButton>
-      </UDropdown>
+      </UDropdown> -->
     </template>
 
     <div class="flex items-center gap-2">

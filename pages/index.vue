@@ -11,7 +11,7 @@ if (host.includes('.netlify.app')) {
   hosting = { url: 'https://deno.com/deploy', title: 'Deno Deploy' }
 }
 const isD1 = host.includes('nuxt-todos-edge.pages.dev')
-const { loggedIn } = useUserSession()
+// const { loggedIn } = useUserSession()
 </script>
 
 <template>
@@ -20,16 +20,15 @@ const { loggedIn } = useUserSession()
       <h3 class="text-lg font-semibold leading-6">
         Todo List
       </h3>
-      <UButton
+      <!-- <UButton
         v-if="!loggedIn"
         to="/api/auth/github"
         icon="i-simple-icons-github"
         label="Login with GitHub"
         color="black"
         external
-      />
+      /> -->
       <UButton
-        v-else
         to="/todos"
         icon="i-heroicons-list-bullet"
         label="Go to Todos"
